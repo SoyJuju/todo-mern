@@ -11,7 +11,13 @@ dotenv.config();
 connectDb();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: `${process.env.VITE_REACT_APP_API_URL}`,
+    methods: ['POST', 'GET', 'DELETE', 'PUT'],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use('/api/todo-list', todoRoutes);
