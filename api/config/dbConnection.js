@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 /*global process*/
-const CONNECTION_STRING = process.env.VITE_CONNNECTION_STRING;
+const CONNECTION_STRING = process.env.VITE_CONNECTION_STRING;
 
 const connectDb = async () => {
   try {
