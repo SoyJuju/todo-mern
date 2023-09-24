@@ -55,9 +55,7 @@ export default function Form({
 
       if (isEditing && editTask) {
         await axios.put(
-          `${import.meta.env.VITE_REACT_APP_API_URL}/api/todo-list/${
-            editTask._id
-          }`,
+          `${import.meta.env.VITE_REACT_APP_API_URL}/todo-list/${editTask._id}`,
           {
             title,
             date: date.format('DD/MM/YYYY'),
@@ -67,7 +65,7 @@ export default function Form({
         setIsEditing(false);
       } else {
         await axios.post(
-          `${import.meta.env.VITE_REACT_APP_API_URL}/api/todo-list`,
+          `${import.meta.env.VITE_REACT_APP_API_URL}/todo-list`,
           {
             title,
             date: date.format('DD/MM/YYYY'),
