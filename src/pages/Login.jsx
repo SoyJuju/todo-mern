@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import showPass from '../assets/show-pass.svg';
 import hidePass from '../assets/hide-pass.svg';
+import { API_URL } from '../../api/config/apiURL.js';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -17,13 +18,10 @@ export default function Login() {
   async function submit(e) {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        'http://localhost:5000/api/users/login',
-        {
-          email,
-          password,
-        }
-      );
+      const response = await axios.post(`${API_URL}/api/users/login`, {
+        email,
+        password,
+      });
 
       if (response.data.accessToken) {
         const token = response.data.accessToken;

@@ -3,7 +3,7 @@ import axios from 'axios';
 import Items from '../components/Items';
 import Form from '../components/Form';
 import { useHistory } from 'react-router-dom';
-import '../style/index.css';
+import { API_URL } from '../../api/config/apiURL.js';
 
 export default function List() {
   const [items, setItems] = useState([]);
@@ -23,7 +23,7 @@ export default function List() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/todo-list', {
+      .get(`${API_URL}/api/todo-list`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -38,7 +38,7 @@ export default function List() {
 
   const delete_item = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/todo-list/${id}`, {
+      await axios.delete(`${API_URL}/api/todo-list/${id}`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
