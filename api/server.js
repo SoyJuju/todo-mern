@@ -13,7 +13,7 @@ connectDb();
 const app = express();
 app.use(
   cors({
-    origin: `${process.env.VITE_REACT_APP_API_URL}`,
+    origin: 'https://todo-mern-ayevkmbbo-soyjuju.vercel.app/',
     methods: ['POST', 'GET', 'DELETE', 'PUT'],
     credentials: true,
   })
