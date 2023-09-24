@@ -4,7 +4,6 @@ import '../style/index.css';
 import delete_icon from '../assets/delete.svg';
 import edit_icon from '../assets/edit.svg';
 import axios from 'axios';
-import { API_URL } from '../../api/config/apiURL.js';
 
 export default function Items({ setRefresh, items, delete_item, handleEdit }) {
   Items.propTypes = {
@@ -20,7 +19,9 @@ export default function Items({ setRefresh, items, delete_item, handleEdit }) {
   const toggleItemChecked = (itemId, completionStatus) => {
     axios
       .put(
-        `${API_URL}/api/todo-list/${itemId}/update-completion`,
+        `${
+          import.meta.env.VITE_REACT_APP_API_URL
+        }/api/todo-list/${itemId}/update-completion`,
         {
           completion: completionStatus,
         },

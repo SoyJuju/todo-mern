@@ -4,7 +4,6 @@ import axios from 'axios';
 import { useHistory, Link } from 'react-router-dom';
 import showPass from '../assets/show-pass.svg';
 import hidePass from '../assets/hide-pass.svg';
-import { API_URL } from '../../api/config/apiURL.js';
 
 export default function Signup() {
   const [username, setUsername] = useState('');
@@ -17,11 +16,14 @@ export default function Signup() {
   async function submit(e) {
     e.preventDefault();
     try {
-      await axios.post(`${API_URL}/api/users/register`, {
-        username,
-        email,
-        password,
-      });
+      await axios.post(
+        `${import.meta.env.VITE_REACT_APP_API_URL}/api/users/register`,
+        {
+          username,
+          email,
+          password,
+        }
+      );
 
       setUsername('');
       setEmail('');

@@ -7,7 +7,6 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
-import { API_URL } from '../../api/config/apiURL.js';
 
 export default function Form({
   setRefresh,
@@ -56,7 +55,9 @@ export default function Form({
 
       if (isEditing && editTask) {
         await axios.put(
-          `${API_URL}/api/todo-list/${editTask._id}`,
+          `${import.meta.env.VITE_REACT_APP_API_URL}/api/todo-list/${
+            editTask._id
+          }`,
           {
             title,
             date: date.format('DD/MM/YYYY'),
@@ -66,7 +67,7 @@ export default function Form({
         setIsEditing(false);
       } else {
         await axios.post(
-          `${API_URL}/api/todo-list`,
+          `${import.meta.env.VITE_REACT_APP_API_URL}/api/todo-list`,
           {
             title,
             date: date.format('DD/MM/YYYY'),
