@@ -18,7 +18,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_REACT_APP_API_URL}/users/login`,
+        `${import.meta.env.VITE_REACT_APP_API_URL}/api/users/login`,
         {
           email,
           password,
