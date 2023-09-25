@@ -104,8 +104,15 @@ export default function Form({
           closeOnSelect={true}
           value={date}
           format={'DD/MM/YYYY'}
+          disableUnderline
           onChange={(newDate) => setDate(newDate)}
-          className="bg-slate-50 text-slate-950 rounded-sm max-[400px]:w-[9rem] h-[2.5rem]"
+          className="bg-slate-50 text-slate-950 rounded-sm max-[400px]:w-[9rem] max-[450px]:w-[10.5rem] max-[500px]:w-[11rem]"
+          sx={{
+            paddingBlock: '0rem',
+            '& .MuiInputBase-input.MuiFilledInput-input': {
+              paddingBlock: '8.5px',
+            },
+          }}
         />
       </LocalizationProvider>
       <button

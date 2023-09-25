@@ -177,50 +177,6 @@ select {
   }
 }
 
-/* Date Picker */
-
-@media (max-width: 500px) {
-  .css-1gctnaj-MuiInputBase-input-MuiFilledInput-input {
-    width: 11rem !important;
-  }
-}
-
-@media (max-width: 450px) {
-  .css-10botns-MuiInputBase-input-MuiFilledInput-input {
-    width: 10.5rem !important;
-  }
-}
-
-@media (max-width: 400px) {
-  .MuiInputBase-input-MuiFilledInput-input {
-    width: 9rem !important;
-  }
-}
-
-.MuiInputBase-root-MuiFilledInput-root:before,
-.MuiInputBase-root-MuiFilledInput-root:before {
-  border-bottom: 0 !important;
-}
-
-.MuiFormControl-root-MuiTextField-root,
-.MuiInputBase-root-MuiFilledField-root {
-  justify-content: center;
-}
-
-.MuiInputBase-root-MuiFilledInput-root {
-  color: rgb(2 6 23) !important;
-  background-color: rgba(255, 255, 255) !important;
-  border-top-left-radius: 0.125rem !important;
-  border-top-right-radius: 0.125rem !important;
-  border-bottom-right-radius: 0.125rem !important;
-  border-bottom-left-radius: 0.125rem !important;
-}
-
-.css-1gctnaj-MuiInputBase-input-MuiFilledInput-input,
-.css-10botns-MuiInputBase-input-MuiFilledInput-input {
-  padding: 8.5px 12px !important;
-}
-
 /* Animated Background */
 
 .full-wh {

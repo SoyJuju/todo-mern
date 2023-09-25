@@ -1,0 +1,17 @@
+[[redirects]]
+  # Redirect from /login to /index.html
+  from = "/login/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  # Redirect from /signup to /index.html
+  from = "/signup/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  # Redirect from /list to /index.html
+  from = "/list/*"
+  to = "/index.html"
+  status = 200
