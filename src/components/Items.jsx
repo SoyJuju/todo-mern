@@ -21,7 +21,7 @@ export default function Items({ setRefresh, items, delete_item, handleEdit }) {
       .put(
         `${
           import.meta.env.VITE_REACT_APP_API_URL
-        }/todo-list/${itemId}/api/update-completion`,
+        }/api/todo-list/${itemId}/update-completion`,
         {
           completion: completionStatus,
         },
