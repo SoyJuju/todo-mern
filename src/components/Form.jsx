@@ -91,7 +91,7 @@ export default function Form({
   }`;
 
   return (
-    <form className="flex flex-wrap gap-x-3" onSubmit={submit}>
+    <form className="flex flex-wrap gap-x-3 items-center" onSubmit={submit}>
       <Input
         className={inputClass}
         value={title}
@@ -105,6 +105,7 @@ export default function Form({
           value={date}
           format={'DD/MM/YYYY'}
           onChange={(newDate) => setDate(newDate)}
+          className="bg-slate-50 text-slate-950 rounded-sm max-[400px]:w-[9rem] h-[2.5rem]"
         />
       </LocalizationProvider>
       <button
@@ -117,7 +118,7 @@ export default function Form({
       {isEditing && (
         <button
           onClick={handleCancel}
-          className="px-3 py-2 rounded-sm my-3 text-slate-950 bg-yellow-400"
+          className="px-3 py-2 rounded-sm my-3 text-slate-950 bg-yellow-400 "
         >
           Cancel
         </button>

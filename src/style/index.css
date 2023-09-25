@@ -192,23 +192,22 @@ select {
 }
 
 @media (max-width: 400px) {
-  .css-10botns-MuiInputBase-input-MuiFilledInput-input {
+  .MuiInputBase-input-MuiFilledInput-input {
     width: 9rem !important;
   }
 }
 
-.css-zs07ro-MuiInputBase-root-MuiFilledInput-root:before,
-.css-1ff8729-MuiInputBase-root-MuiFilledInput-root:before {
+.MuiInputBase-root-MuiFilledInput-root:before,
+.MuiInputBase-root-MuiFilledInput-root:before {
   border-bottom: 0 !important;
 }
 
-.css-1u3bzj6-MuiFormControl-root-MuiTextField-root,
-.css-1ff8729-MuiInputBase-root-MuiFilledField-root {
+.MuiFormControl-root-MuiTextField-root,
+.MuiInputBase-root-MuiFilledField-root {
   justify-content: center;
 }
 
-.css-zs07ro-MuiInputBase-root-MuiFilledInput-root,
-.css-1ff8729-MuiInputBase-root-MuiFilledInput-root {
+.MuiInputBase-root-MuiFilledInput-root {
   color: rgb(2 6 23) !important;
   background-color: rgba(255, 255, 255) !important;
   border-top-left-radius: 0.125rem !important;
