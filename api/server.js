@@ -13,7 +13,7 @@ connectDb();
 const app = express();
 app.use(
   cors({
-    origin: 'https://todo-mern-alpha.vercel.app',
+    origin: 'https://todolist-juju.netlify.app',
     methods: ['POST', 'GET', 'DELETE', 'PUT'],
     credentials: true,
   })
