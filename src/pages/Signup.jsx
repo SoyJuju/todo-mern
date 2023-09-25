@@ -17,7 +17,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       await axios.post(
-        `${import.meta.env.VITE_REACT_APP_API_URL}/users/register`,
+        `${import.meta.env.VITE_REACT_APP_API_URL}/api/users/register`,
         {
           username,
           email,

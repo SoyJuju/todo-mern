@@ -22,7 +22,7 @@ export default function List() {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_REACT_APP_API_URL}/todo-list`, {
+      .get(`${import.meta.env.VITE_REACT_APP_API_URL}/api/todo-list`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -38,7 +38,7 @@ export default function List() {
   const delete_item = async (id) => {
     try {
       await axios.delete(
-        `${import.meta.env.VITE_REACT_APP_API_URL}/todo-list/${id}`,
+        `${import.meta.env.VITE_REACT_APP_API_URL}/api/todo-list/${id}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,
