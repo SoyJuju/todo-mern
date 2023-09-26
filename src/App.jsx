@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_REACT_APP_CHECK_BACKEND}/`).catch(() => {
+    axios.get(`${import.meta.env.VITE_REACT_APP_CHECK_BACKEND}`).catch(() => {
       axios.post(`${import.meta.env.VITE_REACT_APP_REDEPLOY_BACKEND}`);
     });
   }, []);
