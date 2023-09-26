@@ -23,6 +23,10 @@ app.use(express.json());
 app.use('/api/todo-list', todoRoutes);
 app.use('/api/users', userRoutes);
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 if (process.env.VITE_PORT) {
   app.listen(process.env.VITE_PORT, () => {
     console.log(`Server is running on port ${process.env.VITE_PORT}.`);
