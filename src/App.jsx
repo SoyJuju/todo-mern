@@ -4,8 +4,14 @@ import List from './pages/List';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    axios.post(`${import.meta.env.VITE_REACT_APP_REDEPLOY_BACKEND}`);
+  });
+
   return (
     <Router>
       <Navbar />
