@@ -13,7 +13,7 @@ connectDb();
 const app = express();
 app.use(
   cors({
-    origin: 'https://todolist-juju.netlify.app',
+    origin: ['https://todolist-juju.netlify.app', 'https://api.render.com'],
     methods: ['POST', 'GET', 'DELETE', 'PUT'],
     credentials: true,
   })
